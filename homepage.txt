@@ -1,0 +1,106 @@
+//FirstPage
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+<style>
+#header {
+    background-color:#800080;
+    color:#D8BFD8;
+    text-align:center;
+    padding:1px;
+}
+#nav {
+    line-height:30px;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+    width:400px;
+    float:left;
+    padding:10px;	 	 
+}
+#footer {
+    background-color:#800080;
+    color:#D8BFD8;
+    clear:both;
+    text-align:center;
+   padding:2px;	 	 
+}
+</style>
+</head>
+<body background="http://4.bp.blogspot.com/-W5t3S8wAPpI/T_ABCykxHWI/AAAAAAAADuY/bbPLB93JekY/s1600/1-2f.png">
+
+<div id="header">
+<h1>Galería de AA</h1>
+</div>
+
+<div id="nav">
+<p><button onclick="myFunction1()">MyNewJourney</button>
+
+<script>
+function myFunction1() {
+    window.open("newJourney.html");
+}
+</script></p>
+<p><button onclick="myFunction2()">MyFamiless</button>
+
+<script>
+function myFunction2() {
+    window.open("myFamily.html");
+}
+</script></p>
+<p><button onclick="myFunction3()">MyFriendss</button>
+
+<script>
+function myFunction3() {
+    window.open("myFriends.html");
+}
+</script></p>
+<p><button onclick="myFunction4()">MyHobbiess</button>
+
+<script>
+function myFunction4() {
+    window.open("myHobby.html");
+}
+</script></p>
+
+</div>
+
+<div id="section">
+
+<p><center><img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xat1/v/t1.0-9/12063802_981018595274855_3979918131461372935_n.jpg?oh=2ddbb3396706451dda35adef158387f4&oe=575A14C9&__gda__=1464805142_b2ee857458d860e90397ba929c133011" alt="homepage" style="width:330px;height:390px;"></center></p>
+
+<p>Nama: Siti Nur Amalin Aisyah Bt Mohd Azam</p>
+<p>Bac Sains Komputer Pengkhususan Rangkaian Komputer</p>
+</div>
+
+
+<body onload="startTime()">
+<div id="txt"></div>
+
+<div id="footer">
+Copyright © AmalinAisyah.WebApp
+</div>
+
+</body>
+</html>
